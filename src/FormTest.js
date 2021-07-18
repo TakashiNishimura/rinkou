@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import gazou from './img/example.png';
 
 export class FormTest extends Component {
   constructor(props) {
@@ -34,7 +33,6 @@ export class FormTest extends Component {
           <input type="text" value={this.state.value} onChange={this.handleInput} />
           <button onClick={this.send}>SEND</button>
           <div>{this.state.message}</div>
-          <img src={gazou}/>
         </div>
     );
   }
