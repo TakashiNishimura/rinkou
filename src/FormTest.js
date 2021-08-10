@@ -30,6 +30,8 @@ export class FormTest extends Component {
   render() {
     return (
         <div>
+          <img src={'https://1.bp.blogspot.com/-ZOg0qAG4ewU/Xub_uw6q0DI/AAAAAAABZio/MshyuVBpHUgaOKJtL47LmVkCf5Vge6MQQCNcBGAsYHQ/s1600/pose_pien_uruuru_woman.png'}
+            alt={'test'} />
           <input type="text" value={this.state.value} onChange={this.handleInput} />
           <button onClick={this.send}>SEND</button>
           <div>{this.state.message}</div>
