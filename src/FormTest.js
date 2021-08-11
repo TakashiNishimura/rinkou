@@ -40,7 +40,7 @@ export class FormTest extends Component {
         redirect: 'follow'
       };
       // make API call with parameters and use promises to get response
-      fetch("YOUR-API-INVOKE-URL", requestOptions)
+      fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
         .then(response => response.text())
         .then(result => alert(JSON.parse(result).body))
         .catch(error => console.log('error', error));
