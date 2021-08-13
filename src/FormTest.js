@@ -45,7 +45,7 @@ export class FormTest extends Component {
       })
       .catch(e => console.log("error", e));
 
-    console.log(this.state.jsonObj['forecasts'][0]['temperature']['max']['celsius']);
+    console.log(this.state.jsonObj['forecasts']);
 
     return (
         <div>
