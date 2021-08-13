@@ -6,7 +6,8 @@ export class FormTest extends Component {
 
     this.state = {
       value: '',
-      message: ''
+      message: '',
+      jsonObj: {}
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -25,28 +26,27 @@ export class FormTest extends Component {
       value: '',
       message: value
     });
-    // instantiate a headers object
-    var myHeaders = new Headers();
-    // add content type header to object
-    myHeaders.append("Content-Type", "application/json");
-    // using built in JSON utility package turn object to string and store in a variable
-    var raw = JSON.stringify({"firstName":"a","lastName":"b"});
-    // create a JSON object with parameters for API call and store in a variable
-    var requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-    };
-    // make API call with parameters and use promises to get response
-    fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .then(result => alert(JSON.parse(result).body))
-      .catch(error => console.log('error', error));
   }
 
   render() {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: JSON.stringify({"firstName":"","lastName":""}),
+      redirect: 'follow'
+    }
+
+    fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        this.setState({jsonObj: result});
+      })
+      .catch(e => console.log("error", e));
+    
+    console.log(this.state.jsonObj);
+
     return (
         <div>
           <img src={'https://1.bp.blogspot.com/-ZOg0qAG4ewU/Xub_uw6q0DI/AAAAAAABZio/MshyuVBpHUgaOKJtL47LmVkCf5Vge6MQQCNcBGAsYHQ/s1600/pose_pien_uruuru_woman.png'}
