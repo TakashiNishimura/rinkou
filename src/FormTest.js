@@ -41,11 +41,11 @@ export class FormTest extends Component {
     fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
       .then(response => response.json())
       .then(result => {
-        this.setState({jsonObj: result});
+        this.setState({jsonObj: JSON.parse(result).body});
       })
       .catch(e => console.log("error", e));
-    
-    console.log(this.state.jsonObj);
+
+    console.log(this.state.jsonObj['forecasts'][0]['temperature']['max']['celsius']);
 
     return (
         <div>
