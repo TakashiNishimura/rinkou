@@ -149,26 +149,37 @@ export class FormTest extends Component {
   }
 
   render() {
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    const requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: JSON.stringify({"firstName":"","lastName":""}),
-      redirect: 'follow'
+    // const myHeaders = new Headers();
+    // myHeaders.append("Content-Type", "application/json");
+    // const requestOptions = {
+    //   method: 'POST',
+    //   headers: myHeaders,
+    //   body: JSON.stringify({"firstName":"","lastName":""}),
+    //   redirect: 'follow'
+    // }
+    //
+    // fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+    //   .then((response) => response.json())
+    //   .then((result) => {
+    //     this.setState({title: result.title});
+    //   })
+    //   .catch(e => console.log("error", e));
+
+    var data = null;
+
+    var httpObj = new XMLHttpRequest();
+    httpObj.open("POST", "https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", true);
+
+    httpObj.onload = function () {
+      data = JSON.parse(this.responseText);
     }
 
-    fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        this.setState({title: result.title});
-      })
-      .catch(e => console.log("error", e));
+    httpObj.send();
 
     return (
         <div>
           {/*<APITest />*/}
-          <div>{this.state.title}</div>
+          <div>{JSON.stringify(data)}</div>
         </div>
     );
   }
