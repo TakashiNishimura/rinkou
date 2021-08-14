@@ -160,7 +160,7 @@ const APITest = () => {
       //   setPosts(data);
       // });
       .then(response => response.text())
-      .then(res => setPosts(JSON.parse(res).body))
+      .then(res => {setPosts(JSON.parse(res).body);console.log(JSON.parse(res).body)})
       .catch(e => console.log("error", e));
   },[]);
 
