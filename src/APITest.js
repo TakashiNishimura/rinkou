@@ -159,10 +159,10 @@ const APITest = () => {
       //   console.log(data);
       //   setPosts(data);
       // });
-      .then(response => response.text())
+      .then(response => response.json())
       .then(res => {
-        setPosts(JSON.parse(res).body);
-        console.log(JSON.parse(res).body);
+        setPosts(res.body);
+        console.log(res);
       })
       .catch(e => console.log("error", e));
   },[]);
@@ -172,6 +172,5 @@ const APITest = () => {
       <a href={posts["link"]}>{posts["title"]}</a>
     </div>
   );
-};
-
+}
 export default APITest;
