@@ -3,145 +3,145 @@ import React, {useState, useEffect} from "react";
 const APITest = () => {
 
   const [posts, setPosts] = useState({
-    "body":{
-    "publicTime": "",
-    "publicTimeFormatted": "",
-    "publishingOffice": "",
-    "title": "",
-    "link": "",
-    "description": {
-      "publicTime": "",
-      "publicTimeFormatted": "",
-      "headlineText": "",
-      "bodyText": "",
-      "text": ""
+    body: {
+    publicTime: "",
+    publicTimeFormatted: "",
+    publishingOffice: "",
+    title: "",
+    link: "",
+    description: {
+      publicTime: "",
+      publicTimeFormatted: "",
+      headlineText: "",
+      bodyText: "",
+      text: ""
     },
-    "forecasts": [
+    forecasts: [
       {
-        "date": "",
-        "dateLabel": "",
-        "telop": "",
-        "detail": {
-          "weather": "",
-          "wind": "",
-          "wave": ""
+        date: "",
+        dateLabel: "",
+        telop: "",
+        detail: {
+          weather: "",
+          wind: "",
+          wave: ""
         },
-        "temperature": {
-          "min": {
-            "celsius": "",
-            "fahrenheit": ""
+        temperature: {
+          min: {
+            celsius: "",
+            fahrenheit: ""
           },
-          "max": {
-            "celsius": "",
-            "fahrenheit": ""
+          max: {
+            celsius: "",
+            fahrenheit: ""
           }
         },
-        "chanceOfRain": {
-          "T00_06": "",
-          "T06_12": "",
-          "T12_18": "",
-          "T18_24": ""
+        chanceOfRain: {
+          T00_06: "",
+          T06_12: "",
+          T12_18: "",
+          T18_24: ""
         },
-        "image": {
-          "title": "",
-          "url": "",
-          "width": 0,
-          "height": 0
+        image: {
+          title: "",
+          url: "",
+          width: 0,
+          height: 0
         }
       },
       {
-        "date": "",
-        "dateLabel": "",
-        "telop": "",
-        "detail": {
-          "weather": "",
-          "wind": "",
-          "wave": ""
+        date: "",
+        dateLabel: "",
+        telop: "",
+        detail: {
+          weather: "",
+          wind: "",
+          wave: ""
         },
-        "temperature": {
-          "min": {
-            "celsius": "",
-            "fahrenheit": ""
+        temperature: {
+          min: {
+            celsius: "",
+            fahrenheit: ""
           },
-          "max": {
-            "celsius": "",
-            "fahrenheit": ""
+          max: {
+            celsius: "",
+            fahrenheit: ""
           }
         },
-        "chanceOfRain": {
-          "T00_06": "",
-          "T06_12": "",
-          "T12_18": "",
-          "T18_24": ""
+        chanceOfRain: {
+          T00_06: "",
+          T06_12: "",
+          T12_18: "",
+          T18_24: ""
         },
-        "image": {
-          "title": "",
-          "url": "",
-          "width": 0,
-          "height": 0
+        image: {
+          title: "",
+          url: "",
+          width: 0,
+          height: 0
         }
       },
       {
-        "date": "",
-        "dateLabel": "",
-        "telop": "",
-        "detail": {
-          "weather": "",
-          "wind": "",
-          "wave": ""
+        date: "",
+        dateLabel: "",
+        telop: "",
+        detail: {
+          weather: "",
+          wind: "",
+          wave: ""
         },
-        "temperature": {
-          "min": {
-            "celsius": "",
-            "fahrenheit": ""
+        temperature: {
+          min: {
+            celsius: "",
+            fahrenheit: ""
           },
-          "max": {
-            "celsius": "",
-            "fahrenheit": ""
+          max: {
+            celsius: "",
+            fahrenheit: ""
           }
         },
-        "chanceOfRain": {
-          "T00_06": "",
-          "T06_12": "",
-          "T12_18": "",
-          "T18_24": ""
+        chanceOfRain: {
+          T00_06: "",
+          T06_12: "",
+          T12_18: "",
+          T18_24: ""
         },
-        "image": {
-          "title": "",
-          "url": "",
-          "width": 0,
-          "height": 0
+        image: {
+          title: "",
+          url: "",
+          width: 0,
+          height: 0
         }
       }
     ],
-    "location": {
-      "area": "",
-      "prefecture": "",
-      "district": "",
-      "city": ""
+    location: {
+      area: "",
+      prefecture: "",
+      district: "",
+      city: ""
     },
-    "copyright": {
-      "title": "",
-      "link": "",
-      "image": {
-        "title": "",
-        "link": "",
-        "url": "",
-        "width": 0,
-        "height": 0
+    copyright: {
+      title: "",
+      link: "",
+      image: {
+        title: "",
+        link: "",
+        url: "",
+        width: 0,
+        height: 0
       },
-      "provider": [
+      provider: [
         {
-          "link": "",
-          "name": "",
-          "note": ""
+          link: "",
+          name: "",
+          note: ""
         }
       ]
     },
-    "Item": {
-      "clothes": "",
-      "ID": "",
-      "url": ""
+    Item: {
+      clothes: "",
+      ID: "",
+      url: ""
     }}
   });
 
