@@ -14,6 +14,7 @@ const APITest = () => {
 
   return (
     <div>
+      <ul>
       {
         posts.hits.map(item => (
           <li key={item.objectId}>
@@ -21,8 +22,9 @@ const APITest = () => {
           </li>
         ))
       }
+      </ul>
     </div>
   );
 }
 
-export default APITest
+export default APITest;
