@@ -156,15 +156,15 @@ const APITest = () => {
       .then(data => {
         console.log(data);
         setPosts(data);
-      })
+      });
   },[]);
 
   return (
     <div>
-      <a href={posts.link}>{posts["description"]["publicTime"]}</a>
-      <img src={posts["Item"]["url"]}/>
+      <a href={posts["link"]}>{posts["title"]}</a>
+      <img src={posts["Item"]["url"]} alt={"irasuto"}/>
     </div>
   );
-}
+};
 
 export default APITest;
