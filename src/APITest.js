@@ -146,17 +146,22 @@ const APITest = () => {
 
   useEffect(() => {
     // fetch("https://weather.tsukumijima.net/api/forecast/city/400040")
-    fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({"firstName":"","lastName":""}),
-        redirect: 'follow'
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        setPosts(data);
-      });
+    fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev"
+      // , {
+      //   method: 'POST',
+      //   headers: {'Content-Type': 'application/json'},
+      //   body: JSON.stringify({"firstName":"","lastName":""}),
+      //   redirect: 'follow'
+      // }
+      )
+      // .then(response => response.json())
+      // .then(data => {
+      //   console.log(data);
+      //   setPosts(data);
+      // });
+      .then(response => response.text())
+      .then(res => setPosts(JSON.parse(res).body))
+      .catch(e => console.log("error", e));
   },[]);
 
   return (
