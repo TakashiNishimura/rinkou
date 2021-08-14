@@ -140,7 +140,8 @@ const APITest = () => {
   });
 
   useEffect(() => {
-    fetch("https://weather.tsukumijima.net/api/forecast/city/400040")
+    // fetch("https://weather.tsukumijima.net/api/forecast/city/400040")
+    fetch("https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", {method:"POST"})
       .then(response => response.json())
       .then(data => {
         console.log(data);
@@ -150,7 +151,7 @@ const APITest = () => {
 
   return (
     <div>
-      <a href={posts.link}>{posts["title"]}</a>
+      <a href={posts.link}>{posts["description"]["publicTime"]}</a>
     </div>
   );
 }
