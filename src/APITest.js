@@ -3,6 +3,7 @@ import React, {useState, useEffect} from "react";
 const APITest = () => {
 
   const [posts, setPosts] = useState({
+    "body":{
     "publicTime": "",
     "publicTimeFormatted": "",
     "publishingOffice": "",
@@ -141,7 +142,7 @@ const APITest = () => {
       "clothes": "",
       "ID": "",
       "url": ""
-    }
+    }}
   });
 
   useEffect(() => {
@@ -161,7 +162,7 @@ const APITest = () => {
       // });
       .then(response => response.json())
       .then(res => {
-        setPosts(res.body);
+        setPosts(res);
         console.log(res);
       })
       .catch(e => console.log("error", e));
@@ -169,8 +170,8 @@ const APITest = () => {
 
   return (
     <div>
-      <a href={posts["link"]}>{posts["title"]}</a>
+      <a href={posts["body"]["link"]}>{posts["body"]["title"]}</a>
     </div>
   );
 }
-export default APITest;
+export default APITest
