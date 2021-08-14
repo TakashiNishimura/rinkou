@@ -1,4 +1,5 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component } from 'react';
+import APITest from './APITest';
 
 export class FormTest extends Component {
   constructor(props) {
@@ -6,8 +7,7 @@ export class FormTest extends Component {
 
     this.state = {
       value: '',
-      message: '',
-      jsonObj: {}
+      message: ''
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -45,18 +45,9 @@ export class FormTest extends Component {
     //   })
     //   .catch(e => console.log("error", e));
 
-    const [posts, setPosts] = useState([]);
-
-    useEffect(() => {
-      fetch("https://weather.tsukumijima.net/api/forecast/city/400040")
-        .then(response => response.json())
-        .then(data => setPosts(data))
-    },[])
-
     return (
         <div>
-          <img src={posts["forecasts"][0]["image"].url}
-            alt={'test'} />
+          <APITest />
           <input type="text" value={this.state.value} onChange={this.handleInput} />
           <button onClick={this.send}>SEND</button>
           <div>{this.state.message}</div>
