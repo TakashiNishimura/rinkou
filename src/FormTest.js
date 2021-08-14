@@ -165,21 +165,20 @@ export class FormTest extends Component {
     //   })
     //   .catch(e => console.log("error", e));
 
-    var data = null;
-
-    var httpObj = new XMLHttpRequest();
-    httpObj.open("POST", "https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", true);
-
-    httpObj.onload = function () {
-      data = JSON.parse(this.responseText);
-    }
-
-    httpObj.send();
+    // var data = null;
+    //
+    // var httpObj = new XMLHttpRequest();
+    // httpObj.open("POST", "https://viwy3zwne1.execute-api.us-east-1.amazonaws.com/dev", true);
+    //
+    // httpObj.onload = function () {
+    //   data = JSON.parse(this.responseText);
+    // }
+    //
+    // httpObj.send();
 
     return (
         <div>
-          {/*<APITest />*/}
-          <div>{JSON.stringify(data)}</div>
+          <APITest />
         </div>
     );
   }

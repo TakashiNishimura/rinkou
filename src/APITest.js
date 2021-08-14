@@ -154,10 +154,11 @@ const APITest = () => {
         redirect: 'follow'
       }
       )
-      .then(response => response.json())
+      .then(response => response.text())
       .then(res => {
-        console.log(res);
-        setPosts(res);
+        let data = JSON.parse(res);
+        console.log(JSON.parse(data.body));
+        setPosts(JSON.parse(data.body));
       })
       .catch(e => console.log("error", e));
   },[]);
