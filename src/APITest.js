@@ -3,19 +3,19 @@ import React, {useState, useEffect} from "react";
 const APITest = () => {
 
   const [posts, setPosts] = useState({
-    // publicTime: "",
-    // publicTimeFormatted: "",
-    // publishingOffice: "",
-    // title: "",
-    // link: "",
-    // description: {
+    publicTime: "",
+    publicTimeFormatted: "",
+    publishingOffice: "",
+    title: "",
+    link: "",
+    description: {
     //   publicTime: "",
     //   publicTimeFormatted: "",
     //   headlineText: "",
     //   bodyText: "",
     //   text: ""
-    // },
-    // forecasts: [
+    },
+    forecasts: [
     //   {
     //     date: "",
     //     dateLabel: "",
@@ -112,14 +112,14 @@ const APITest = () => {
     //       height: 0
     //     }
     //   }
-    // ],
-    // location: {
+    ],
+    location: {
     //   area: "",
     //   prefecture: "",
     //   district: "",
     //   city: ""
-    // },
-    // copyright: {
+    },
+    copyright: {
     //   title: "",
     //   link: "",
     //   image: {
@@ -136,7 +136,7 @@ const APITest = () => {
     //       note: ""
     //     }
     //   ]
-    // }
+    }
   });
 
   useEffect(() => {
@@ -150,7 +150,7 @@ const APITest = () => {
 
   return (
     <div>
-      <a href={posts.link}>{posts.title}</a>
+      <a href={posts.link}>{posts["title"]}</a>
     </div>
   );
 }
