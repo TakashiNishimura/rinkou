@@ -12,11 +12,7 @@ const APITest = () => {
 
   return (
     <div>
-      <ul>
-        {
-          posts.map(post => <li key={post.title}>{post.title}</li>)
-        }
-      </ul>
+      <span>{posts}</span>
     </div>
   );
 }
