@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 
 const APITest = () => {
 
-  const [posts, setPosts] = useState({ hits:[] });
+  const [posts, setPosts] = useState({});
 
   useEffect(() => {
     fetch("https://weather.tsukumijima.net/api/forecast/city/400040")
@@ -16,7 +16,7 @@ const APITest = () => {
     <div>
       <ul>
       {
-        posts.hits.map(item => (
+        posts.map(item => (
           <li key={item.objectId}>
             <a href={item.link}>{item.title}</a>
           </li>
