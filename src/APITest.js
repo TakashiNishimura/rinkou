@@ -167,7 +167,6 @@ const APITest = () => {
   return (
     <div>
       <a href={posts["link"]}>{posts["title"]}</a>
-      <img src={posts["Item"]["url"]} alt={"irasuto"}/>
     </div>
   );
 };
